@@ -1,0 +1,316 @@
+/* src/styles/variables.css - UNIFIED CSS VARIABLES */
+
+:root {
+  /* ===== PRIMARY COLORS ===== */
+  --color-primary: #10b981;  /* Updated to match accessibility.css */
+  --color-primary-light: #60a5fa;
+  --color-primary-lighter: rgba(59, 130, 246, 0.15);
+  --color-primary-dark: #047857;  /* Updated to match accessibility.css */
+  --color-primary-darker: #065f46;  /* From accessibility.css */
+  --color-primary-darkest: #064e3b;  /* From accessibility.css */
+  --color-secondary: #3b82f6;
+  --color-secondary-light: #60a5fa;  /* From accessibility.css */
+  --color-secondary-dark: #3730a3;
+  
+  /* Legacy primary color variations (from contact.css) */
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #1d4ed8;
+  --primary-blue-darker: #1e40af;
+  --primary-purple: #8b5cf6;
+  --primary-purple-dark: #7c3aed;
+  --primary-purple-darker: #6d28d9;
+  --primary-green: #10b981;
+  --primary-green-light: #16a085;
+  
+  /* ===== ACCENT COLORS ===== */
+  --color-accent: #8b5cf6;  /* From accessibility.css */
+  --color-accent-dark: #7c3aed;  /* From accessibility.css */
+  --color-accent-darker: #581c87;  /* From accessibility.css */
+  --color-yellow-400: #fbbf24;
+  --color-yellow-500: #f59e0b;
+  --color-yellow-600: #eab308;
+  --color-green-500: #10b981;
+  --color-cyan-500: #06b6d4;
+  --color-purple-500: #8b5cf6;
+  --color-red-500: #ef4444;
+  --color-orange-500: #f97316;
+  --color-lime-500: #84cc16;
+  --color-pink-500: #ec4899;
+  --color-teal-500: #14b8a6;
+  --color-danger: #ef4444;  /* From accessibility.css */
+  
+  /* ===== SLATE COLORS ===== */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  
+  /* ===== GRAY COLORS ===== */
+  --color-white: #ffffff;  /* From accessibility.css */
+  --color-gray-50: #f8fafc;  /* Updated to match accessibility.css */
+  --color-gray-100: #f1f5f9;  /* Updated to match accessibility.css */
+  --color-gray-200: #e2e8f0;  /* Updated to match accessibility.css */
+  --color-gray-300: #cbd5e1;  /* Updated to match accessibility.css */
+  --color-gray-400: #94a3b8;  /* Updated to match accessibility.css */
+  --color-gray-500: #64748b;  /* Updated to match accessibility.css */
+  --color-gray-600: #475569;  /* Updated to match accessibility.css */
+  --color-gray-700: #334155;  /* Updated to match accessibility.css */
+  --color-gray-800: #1e293b;  /* Updated to match accessibility.css */
+  --color-gray-850: #1f2937;  /* From accessibility.css */
+  --color-gray-900: #0f172a;  /* Updated to match accessibility.css */
+  --color-gray-950: #020617;  /* From accessibility.css */
+  
+  /* ===== BACKGROUND COLORS ===== */
+  --bg-header: rgba(15, 23, 42, 0.95);
+  --bg-nav-mobile: rgba(15, 23, 42, 0.98);
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --bg-border-slate: rgba(51, 65, 85, 0.5);
+  --bg-slate-900: #0f172a;  /* From accessibility.css */
+  --bg-slate-800: #1e293b;  /* From accessibility.css */
+  --bg-slate-700: #334155;  /* From accessibility.css */
+  --bg-gray-800: #1f2937;  /* From accessibility.css */
+  --bg-gray-700: #374151;  /* From accessibility.css */
+  --bg-gray-600: #4b5563;  /* From accessibility.css */
+  --bg-dark-900: #15233a;  /* From accessibility.css */
+  
+  /* Background colors from contact.css */
+  --bg-primary: rgba(30, 41, 59, 0.6);
+  --bg-secondary: rgba(15, 23, 42, 0.8);
+  --bg-secondary-focus: rgba(15, 23, 42, 0.9);
+  --bg-card: linear-gradient(135deg, #1f2937, #374151);
+  --bg-glassmorphism: rgba(255, 255, 255, 0.05);
+  --bg-glassmorphism-hover: rgba(59, 130, 246, 0.1);
+  
+  /* ===== BORDER COLORS ===== */
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  --border-tertiary: #4b5563;
+  --border-blue: rgba(59, 130, 246, 0.2);
+  --border-blue-focus: #3b82f6;
+  --border-purple: #8b5cf6;
+  --border-gray: 1px solid var(--color-gray-700);  /* From accessibility.css */
+  --border-light: 1px solid var(--color-gray-600);  /* From accessibility.css */
+  --border-lighter: 1px solid var(--color-gray-600);  /* From accessibility.css */
+  --border-width: 1px;  /* From accessibility.css */
+  --border-width-thick: 2px;  /* From accessibility.css */
+  
+  /* ===== TEXT COLORS ===== */
+  --text-primary: #e2e8f0;
+  --text-secondary: #d1d5db;  /* Updated to match accessibility.css */
+  --text-tertiary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-disabled: #64748b;  /* From accessibility.css */
+  --text-blue: #60a5fa;
+  --text-white: white;
+  
+  /* ===== SPACING ===== */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  
+  /* Alternative spacing naming (unified) */
+  --spacing-xs: 0.25rem;    /* 4px */
+  --spacing-sm: 0.5rem;     /* 8px */
+  --spacing-md: 1rem;       /* 16px */
+  --spacing-lg: 1.5rem;     /* 24px */
+  --spacing-xl: 2rem;       /* 32px */
+  --spacing-2xl: 3rem;      /* 48px */
+  --spacing-3xl: 4rem;      /* 64px */
+  --spacing-4xl: 5rem;      /* 80px */
+  
+  /* ===== TYPOGRAPHY ===== */
+  /* Font Sizes */
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.8rem;
+  --font-size-md: 0.85rem;
+  --font-size-lg: 0.9rem;
+  --font-size-xl: 1rem;
+  --font-size-2xl: 1.1rem;
+  --font-size-3xl: 1.2rem;
+  --font-size-4xl: 1.25rem;
+  --font-size-5xl: 1.5rem;
+  --font-size-6xl: 2rem;
+  --font-size-7xl: 3rem;
+  
+  /* Alternative font sizes (unified from both files) */
+  --font-xs: 0.7rem;  /* Updated to match accessibility.css */
+  --font-sm: 0.8rem;  /* Updated to match accessibility.css */
+  --font-base: 0.9rem;  /* From accessibility.css */
+  --font-md: 1rem;  /* Updated to match accessibility.css */
+  --font-lg: 1.1rem;  /* Updated to match accessibility.css */
+  --font-xl: 1.2rem;  /* Updated to match accessibility.css */
+  --font-2xl: 1.3rem;  /* Updated to match accessibility.css */
+  --font-3xl: 1.5rem;  /* Updated to match accessibility.css */
+  --font-4xl: 2rem;  /* Updated to match accessibility.css */
+  --font-5xl: 2.5rem;  /* From accessibility.css */
+  --font-6xl: 3rem;  /* From accessibility.css */
+  --font-hero: 4rem;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Alternative font weight naming (unified) */
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.6;
+  --line-height-very-loose: 1.7;
+  --leading-normal: 1.5;  /* From accessibility.css */
+  --leading-relaxed: 1.6;  /* From accessibility.css */
+  --leading-loose: 1.7;  /* From accessibility.css */
+  
+  /* Font Families */
+  --font-mono: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+  
+  /* ===== BORDER RADIUS ===== */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius-md: 0.5rem;   /* 8px */
+  --border-radius-lg: 0.75rem;  /* 12px */
+  
+  /* Alternative border radius naming (unified) */
+  --radius-sm: 0.25rem;  /* Updated to match accessibility.css */
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 4px 15px rgba(16, 185, 129, 0.3);  /* Updated to match accessibility.css */
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.3);  /* Updated to match accessibility.css */
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --shadow-blue: 0 10px 25px rgba(59, 130, 246, 0.2);
+  --shadow-blue-lg: 0 15px 35px rgba(59, 130, 246, 0.4);
+  --shadow-primary: 0 4px 15px rgba(16, 185, 129, 0.3);  /* From accessibility.css */
+  --shadow-accent: 0 4px 15px rgba(139, 92, 246, 0.3);  /* From accessibility.css */
+  
+  /* Extended shadows from contact.css */
+  --shadow-glow-blue: 0 0 30px rgba(59, 130, 246, 0.3);
+  --shadow-glow-blue-strong: 0 0 20px rgba(59, 130, 246, 0.5);
+  --shadow-glow-purple: 0 0 15px rgba(139, 92, 246, 0.5);
+  --shadow-glow-purple-strong: 0 0 20px rgba(139, 92, 246, 0.8);
+  --shadow-glow-green: 0 0 10px rgba(16, 185, 129, 0.3);
+  --shadow-glow-white: 0 0 10px rgba(226, 232, 240, 0.3);
+  --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --shadow-card-blue: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(59, 130, 246, 0.2);
+  --shadow-card-purple: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(139, 92, 246, 0.2);
+  --shadow-button: 0 8px 20px rgba(59, 130, 246, 0.3);
+  --shadow-button-purple: 0 4px 12px rgba(139, 92, 246, 0.3);
+  --shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  --shadow-focus-strong: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 0 20px rgba(59, 130, 246, 0.2);
+  
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.5s ease;  /* Updated to match accessibility.css */
+  
+  /* ===== OPACITY ===== */
+  --opacity-10: 0.1;  /* From accessibility.css */
+  --opacity-60: 0.6;  /* From accessibility.css */
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;  /* From accessibility.css */
+  --opacity-100: 1;
+  
+  /* ===== GRADIENTS ===== */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-hero: linear-gradient(45deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));  /* Updated to match accessibility.css */
+  --gradient-layer: linear-gradient(135deg, var(--color-slate-800), var(--color-slate-700));
+  --gradient-layer-active: linear-gradient(135deg, var(--color-primary-dark), var(--color-secondary-dark));
+  --gradient-tech: linear-gradient(135deg, var(--color-gray-800), var(--color-gray-700));
+  --gradient-table: linear-gradient(135deg, var(--color-gray-700), var(--color-gray-600));
+  --gradient-shimmer: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  --gradient-slate: linear-gradient(225deg, var(--bg-slate-800), var(--color-gray-700));  /* From accessibility.css */
+  --gradient-gray: linear-gradient(135deg, var(--bg-gray-800), var(--bg-gray-700));  /* From accessibility.css */
+  --gradient-primary-dark: linear-gradient(135deg, var(--color-primary-darker), var(--color-primary-dark));  /* From accessibility.css */
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-darker), var(--color-accent-dark));  /* From accessibility.css */
+  --gradient-success: linear-gradient(135deg, var(--color-primary-dark), #059669);  /* From accessibility.css */
+  --gradient-primary-hover: linear-gradient(135deg, var(--color-primary-darker), var(--color-primary-darkest));  /* From accessibility.css */
+  
+  /* Extended gradients from contact.css */
+  --gradient-blue-primary: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --gradient-blue-button: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  --gradient-blue-button-hover: linear-gradient(135deg, #1d4ed8, #1e40af);
+  --gradient-purple-button: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  --gradient-purple-button-hover: linear-gradient(135deg, #7c3aed, #6d28d9);
+  --gradient-shimmer-purple: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.05), transparent);
+  --gradient-shimmer-card: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  
+  /* Radial Gradients */
+  --radial-blue: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  --radial-blue-section: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  --radial-green-section: radial-gradient(circle at 70% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+  --radial-purple-section: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  
+  /* ===== BACKDROP FILTER ===== */
+  --backdrop-blur-sm: blur(5px);
+  --backdrop-blur-md: blur(10px);
+  --backdrop-blur: blur(10px);  /* From accessibility.css */
+  
+  /* ===== Z-INDEX SCALE ===== */
+  --z-header: 1000;
+  --z-menu-toggle: 1001;
+  --z-dropdown: 1000;  /* From accessibility.css */
+  
+  /* ===== CONTAINER WIDTHS ===== */
+  --container-max-width: 1200px;
+  --container-md-width: 600px;
+  --container-sm-width: 320px;
+  
+  /* ===== BREAKPOINTS ===== */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --bp-mobile: 480px;  /* From accessibility.css */
+  --bp-tablet: 768px;  /* From accessibility.css */
+  --bp-desktop: 1024px;  /* From accessibility.css */
+  
+  /* ===== LAYOUT MEASUREMENTS ===== */
+  --header-height: 80px;
+  
+  /* ===== SCROLLBAR ===== */
+  --scrollbar-width: 8px;
+  --scrollbar-border-radius: 4px;
+  
+  /* ===== HAMBURGER MENU ===== */
+  --hamburger-width: 24px;
+  --hamburger-height: 18px;
+  --hamburger-bar-height: 2px;
+  --hamburger-spacing: 6px;
+  
+  /* ===== MINIMUM WIDTHS ===== */
+  --min-width-layer-box: 200px;
+  --min-width-layer-box-tablet: 180px;
+  --min-width-layer-box-mobile: 150px;
+  --min-width-tech-item: 250px;
+  --min-width-table-card: 300px;
+  
+  /* ===== COMPONENT SPECIFIC ===== */
+  --toggle-width: 50px;  /* From accessibility.css */
+  --toggle-height: 24px;  /* From accessibility.css */
+  --toggle-thumb-size: 18px;  /* From accessibility.css */
+  --toggle-thumb-offset: 3px;  /* From accessibility.css */
+  --toggle-translate: 26px;  /* From accessibility.css */
+}

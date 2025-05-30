@@ -1,0 +1,55 @@
+/* src/styles/index.css */
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: var(--line-height-normal);
+  color: var(--color-slate-200);
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-slate-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-600);
+  border-radius: var(--scrollbar-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-500);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+    max-width: var(--container-md-width);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-xs);
+    max-width: var(--container-sm-width);
+  }
+}

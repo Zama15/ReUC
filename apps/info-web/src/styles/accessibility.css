@@ -1,0 +1,108 @@
+/* src/styles/accessibility.css */
+
+:root {
+  /* Default accessibility variables */
+  --accessibility-font-scale: 1;
+  --accessibility-font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --accessibility-vision-filter: none;
+}
+
+/* Apply font scaling to all text elements */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button, input, textarea, select, label,
+.text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  font-size: calc(var(--font-size, 1rem) * var(--accessibility-font-scale, 1)) !important;
+}
+
+/* Apply font family override */
+* {
+  font-family: var(--accessibility-font-family) !important;
+}
+
+/* Apply vision filter to the entire document */
+html {
+  filter: var(--accessibility-vision-filter);
+}
+
+/* Font size mappings for your existing variables */
+.text-xs { --font-size: var(--font-xs, 0.7rem); }
+.text-sm { --font-size: var(--font-sm, 0.8rem); }
+.text-base { --font-size: var(--font-base, 0.9rem); }
+.text-md { --font-size: var(--font-md, 1rem); }
+.text-lg { --font-size: var(--font-lg, 1.1rem); }
+.text-xl { --font-size: var(--font-xl, 1.2rem); }
+.text-2xl { --font-size: var(--font-2xl, 1.3rem); }
+.text-3xl { --font-size: var(--font-3xl, 1.5rem); }
+.text-4xl { --font-size: var(--font-4xl, 2rem); }
+.text-5xl { --font-size: var(--font-5xl, 2.5rem); }
+.text-6xl { --font-size: var(--font-6xl, 3rem); }
+
+/* Headings */
+h1 { --font-size: var(--font-4xl, 2rem); }
+h2 { --font-size: var(--font-3xl, 1.5rem); }
+h3 { --font-size: var(--font-2xl, 1.3rem); }
+h4 { --font-size: var(--font-xl, 1.2rem); }
+h5 { --font-size: var(--font-lg, 1.1rem); }
+h6 { --font-size: var(--font-md, 1rem); }
+
+/* Body text */
+body, p { --font-size: var(--font-base, 0.9rem); }
+
+/* Buttons and inputs */
+button, input, textarea, select { --font-size: var(--font-base, 0.9rem); }
+
+/* Small text elements */
+small, .small { --font-size: var(--font-sm, 0.8rem); }
+
+/* Navigation and menu items */
+nav a, .nav-link { --font-size: var(--font-base, 0.9rem); }
+
+/* Card titles and content */
+.card-title { --font-size: var(--font-lg, 1.1rem); }
+.card-content { --font-size: var(--font-base, 0.9rem); }
+
+/* Ensure minimum font sizes for readability */
+@media (max-width: 768px) {
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p, span, div, a, button, input, textarea, select, label {
+    font-size: calc(max(var(--font-size, 1rem), 14px) * var(--accessibility-font-scale, 1)) !important;
+  }
+}
+
+/* Smooth transitions for font changes */
+* {
+  transition: font-size 0.2s ease, font-family 0.2s ease;
+}
+
+/* Ensure proper line height scaling */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button, input, textarea, select, label {
+  line-height: calc(var(--line-height-normal, 1.6) * var(--accessibility-font-scale, 1));
+}
+
+/* Prevent layout breaks with very large fonts */
+* {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Special handling for fixed-size elements */
+.icon, .logo {
+  font-size: var(--font-size, 1rem) !important; /* Don't scale icons */
+}
+
+/* Ensure buttons remain usable at all font sizes */
+button {
+  min-height: calc(44px * var(--accessibility-font-scale, 1));
+  padding: calc(8px * var(--accessibility-font-scale, 1)) calc(16px * var(--accessibility-font-scale, 1));
+}
+
+/* Scale input heights */
+input, textarea, select {
+  min-height: calc(40px * var(--accessibility-font-scale, 1));
+  padding: calc(8px * var(--accessibility-font-scale, 1)) calc(12px * var(--accessibility-font-scale, 1));
+}

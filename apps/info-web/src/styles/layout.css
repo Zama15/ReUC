@@ -1,0 +1,13 @@
+/* src/styles/layout.css */
+@import './variables.css';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-top: var(--header-height);
+  padding: var(--spacing-xl) 0;
+}
