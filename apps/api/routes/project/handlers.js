@@ -249,3 +249,21 @@ export async function deleteProjectResourceFileHandler(req, res) {
     message: "Project resource deleted successfully.",
   });
 }
+
+/**
+ * Handles the upload of a link for a project.
+ */
+export async function uploadProjectResourceLinkHandler(req, res) {
+  const { uuid: uuidProject } = req.params;
+
+  const { resource } = await project.uploadLink({
+    uuidProject,
+    uuidRequestingUser: req.user.uuid_user,
+    body: req.body,
+  });
+
+  return res.status(201).json({
+    success: true,
+    data: { resource },
+  });
+}

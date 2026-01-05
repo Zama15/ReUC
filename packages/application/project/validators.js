@@ -1,9 +1,7 @@
 import {
-  validateDate,
-  validateString,
   validateUuid,
-  validateNumberOrNumberArray,
   validatePaginationQuery,
+  validateString,
 } from "../shared/validators.js";
 import { ValidationError } from "../errors/ValidationError.js";
 
@@ -55,6 +53,41 @@ function validateSignedNumber(value, fieldName) {
     rule: "invalid_type",
     expected: "string_or_number",
   });
+
+  return errors;
+}
+
+/**
+ * Validate a Link.
+ * It ensures the value is a valid Link.
+ *
+ * @param {string} value - The value to validate.
+ * @param {string} fieldName - The name of the field for error messages.
+ *
+ * @returns {Array<object>} - A list with all the errors object.
+ * @example [{ field: "firstName", rule: "missing_or_empty" }]
+ */
+function validateLink(value, fieldName) {
+  const errors = [];
+
+  if (typeof value !== "string") {
+    errors.push({
+      field: fieldName,
+      rule: "invalid_type",
+      expected: "string",
+    });
+
+    return errors;
+  }
+
+  const linkRegex = /^(https?|ftp):\/\/(-\.)?([^\s/?\.#-]+\.?)+(\/[^\s]*)?$/i;
+
+  if (!linkRegex.test(value)) {
+    errors.push({
+      field: fieldName,
+      rule: "invalid_format",
+    });
+  }
 
   return errors;
 }
@@ -151,6 +184,34 @@ export function validateMemberUpdate(uuidProject, uuidMemberUser, body) {
     });
   } else {
     allErrors.push(...validateSignedNumber(body.roleId, "roleId"));
+  }
+
+  if (allErrors.length > 0) {
+    throw new ValidationError("Input validation failed.", {
+      details: allErrors,
+    });
+  }
+}
+
+/**
+ * Validates the entire payload for uploading a external link.
+ * @param {string} uuidProject - The UUID of the project to relate the upload to.
+ * @param {string} uuidRequestingUser - The UUID of the user requesting the upload.
+ * @param {object} body
+ * @param {string} body.url - The External Link to upload.
+ * @param {string} [body.displayName] - The name to display on client-side.
+ *
+ * @throws {ValidationError} If the payload is invalid.
+ */
+export function validateUploadLink(uuidProject, uuidRequestingUser, body) {
+  const allErrors = [];
+
+  allErrors.push(...validateUuid(uuidProject, "uuidProject"));
+  allErrors.push(...validateUuid(uuidRequestingUser, "uuidRequestingUser"));
+  allErrors.push(...validateLink(body.url, "url"));
+
+  if (body.displayName !== undefined) {
+    allErrors.push(...validateString(body.displayName, "displayName", "title"));
   }
 
   if (allErrors.length > 0) {

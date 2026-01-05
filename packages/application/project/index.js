@@ -12,6 +12,7 @@ import { updateDeadline } from "./updateDeadline.js";
 import { uploadFile } from "./uploadFile.js";
 import { editFile } from "./editFile.js";
 import { deleteFile } from "./deleteFile.js";
+import { uploadLink } from "./uploadLink.js";
 
 /**
  * The 'project' entity in the application layer, grouping all project
@@ -32,6 +33,7 @@ const project = {
   uploadFile,
   editFile,
   deleteFile,
+  uploadLink,
 };
 
 export default project;

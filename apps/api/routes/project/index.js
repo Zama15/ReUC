@@ -18,6 +18,7 @@ import {
   uploadProjectResourceFileHandler,
   editProjectResourceFileHandler,
   deleteProjectResourceFileHandler,
+  uploadProjectResourceLinkHandler,
 } from "./handlers.js";
 
 export const projectRouter = express.Router();
@@ -110,3 +111,21 @@ projectRouter.delete(
   requireRole(["student", "professor"]),
   asyncHandler(deleteProjectResourceFileHandler)
 );
+projectRouter.post(
+  "/:uuid/resources/links",
+  csrfProtection,
+  requireRole(["student", "professor"]),
+  asyncHandler(uploadProjectResourceLinkHandler)
+);
+// projectRouter.put(
+//   "/:uuid/resources/links/:uuidResource",
+//   csrfProtection,
+//   requireRole(["student", "professor"]),
+//   asyncHandler(editProjectResourceLinkHandler)
+// );
+// projectRouter.delete(
+//   "/:uuid/resources/links/:uuidResource",
+//   csrfProtection,
+//   requireRole(["student", "professor"]),
+//   asyncHandler(deleteProjectResourceLinkHandler)
+// );
